@@ -14,7 +14,7 @@ import scipy.sparse
 # from fast_rcnn.config import cfg
 import skimage
 
-from config_files.config_iit_masks import Config
+from config_files.config import Config
 
 cfg = Config()
 
@@ -97,12 +97,12 @@ class imdb(object):
         or a numpy array of detection.
 
         all_boxes[class][image] = [] or np.array of shape #dets x 5
-        
+
         all_rles is a list of length number-of-classes
         Each list element is a list of length number-of-images.
         Each of those list elements is either an empty dict {} or a array of numpy dic of instance mask
-        all_boxes[class][image] = {} or = [{'counts': '0i0', 'size': [1L, 25L]}, {'counts': '0b1', 'size': [1L, 50L]}] 
-        all_boxes[class][image][0] = {'counts': '0i0', 'size': [1L, 25L]} ---> rle of an instance 
+        all_boxes[class][image] = {} or = [{'counts': '0i0', 'size': [1L, 25L]}, {'counts': '0b1', 'size': [1L, 50L]}]
+        all_boxes[class][image][0] = {'counts': '0i0', 'size': [1L, 25L]} ---> rle of an instance
         """
         raise NotImplementedError
 
